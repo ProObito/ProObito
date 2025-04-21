@@ -235,45 +235,37 @@ async def auto_rename_files(client, message):
     if not format_template:
         return await message.reply_text(to_small_caps("ᴘʟᴇᴀꜱᴇ ꜱᴇᴛ ᴀ ʀᴇɴᴀᴍᴇ ꜰᴏʀᴍᴀᴛ ᴜꜱɪɴɢ /autorename"))
 
-    # get file information
-    if message.document:
-        file_id = message.document.file_id
-        file_name = message.document.file_name
-        file_size = message.document.file_size
-        media_type = "document"
-    elif message.video:
-        file_id = message.video.file_id
-        file_name = message.video.file_name or "video"
-        file_size = message.video.file_size
-        media_type = "video"
-    elif message.audio:
-        file_id = message.audio.file_id
-        file_name = message.audio.file_name or "audio"
-        file_size = message.audio.file_size
-        media_type = "audio"
-    else:
-        return await message.reply_text(to_small_caps("ᴜɴꜱᴜᴘᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ ᴛʏᴘᴇ"))
-
-    # nsfw check
-    if await check_anti_nsfw(file_name, message):
-        return await message.reply_text(to_small_caps("ɴꜱꜰᴡ ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ"))
-
-    # user-specific operation key
-    operation_key = f"{user_id}:{file_id}"
-
-    # prevent duplicate processing for the same user and file
-    if operation_key in renaming_operations:
-        if (datetime.now() - renaming_operations[operation_key]).seconds < 30:
-            logger.info(f"Operation already in progress for {operation_key}")
-            return await message.reply_text(to_small_caps("ᴛʜɪꜱ ꜰɪʟᴇ ɪꜱ ᴀʟʀᴇᴀᴅʏ ʙᴇɪɴɢ ᴘʀᴏᴄᴇꜱꜱᴇᴅ"))
-    renaming_operations[operation_key] = datetime.now()
+    # Create unique working directory for this operation
+    timestamp = int(time.time())
+    temp_dir = f"temp_{user_id}_{timestamp}"
+    os.makedirs(temp_dir, exist_ok=True)
 
     try:
+        # get file information
+        if message.document:
+            file_id = message.document.file_id
+            file_name = message.document.file_name
+            media_type = "document"
+        elif message.video:
+            file_id = message.video.file_id
+            file_name = message.video.file_name or "video"
+            media_type = "video"
+        elif message.audio:
+            file_id = message.audio.file_id
+            file_name = message.audio.file_name or "audio"
+            media_type = "audio"
+        else:
+            return await message.reply_text(to_small_caps("ᴜɴꜱᴜᴘᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ ᴛʏᴘᴇ"))
+
+        # nsfw check
+        if await check_anti_nsfw(file_name, message):
+            return await message.reply_text(to_small_caps("ɴꜱꜰᴡ ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ"))
+
         # determine extraction source (filename or caption)
         extraction_mode = await codeflixbots.get_extraction_mode(user_id)
         source_text = message.caption if extraction_mode == "caption" else file_name
         if not source_text:
-            source_text = file_name  # fallback to filename if caption is empty
+            source_text = file_name
 
         # extract metadata from source
         season, value, metadata_type = await extract_season_episode(source_text, user_id)
@@ -296,15 +288,11 @@ async def auto_rename_files(client, message):
         for placeholder, value in replacements.items():
             format_template = format_template.replace(placeholder, value)
 
-        # prepare file paths with unique identifiers to prevent conflicts
-        timestamp = int(time.time())
+        # prepare file paths with unique names
         ext = os.path.splitext(file_name)[1] or ('.mp4' if media_type == 'video' else '.mp3')
-        new_filename = f"{format_template}_{timestamp}{ext}"
-        download_path = f"downloads/{user_id}/{new_filename}"
-        metadata_path = f"metadata/{user_id}/{new_filename}"
-        
-        os.makedirs(os.path.dirname(download_path), exist_ok=True)
-        os.makedirs(os.path.dirname(metadata_path), exist_ok=True)
+        new_filename = f"{format_template}{ext}"
+        download_path = os.path.join(temp_dir, new_filename)
+        metadata_path = os.path.join(temp_dir, f"processed_{new_filename}")
 
         # download file
         msg = await message.reply_text(to_small_caps("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**"))
@@ -319,31 +307,29 @@ async def auto_rename_files(client, message):
                 raise Exception("Download failed - no file path returned")
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴅᴏᴡɴʟᴏᴀᴅ ꜰᴀɪʟᴇᴅ: {str(e)}"))
-            await cleanup_files(download_path)
             return
 
         # process metadata
         await msg.edit(to_small_caps("**ᴘʀᴏᴄᴇꜱꜱɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ...**"))
         try:
             await add_metadata(file_path, metadata_path, user_id)
-            file_path = metadata_path  # Use the processed file for upload
+            file_path = metadata_path
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴍᴇᴛᴀᴅᴀᴛᴀ ᴘʀᴏᴄᴇꜱꜱɪɴɢ ꜰᴀɪʟᴇᴅ: {str(e)}"))
-            await cleanup_files(download_path, metadata_path)
             return
 
         # prepare for upload
         await msg.edit(to_small_caps("**ᴘʀᴇᴘᴀʀɪɴɢ ᴜᴘʟᴏᴀᴅ...**"))
-        caption = await codeflixbots.get_caption(message.chat.id) or f"**{new_filename.replace('_' + str(timestamp), '')}**"
+        caption = await codeflixbots.get_caption(message.chat.id) or f"**{new_filename}**"
         thumb = await codeflixbots.get_thumbnail(message.chat.id)
         thumb_path = None
 
         # handle thumbnail
         try:
             if thumb:
-                thumb_path = await client.download_media(thumb)
+                thumb_path = await client.download_media(thumb, file_name=os.path.join(temp_dir, "thumb.jpg"))
             elif media_type == "video" and message.video.thumbs:
-                thumb_path = await client.download_media(message.video.thumbs[0].file_id)
+                thumb_path = await client.download_media(message.video.thumbs[0].file_id, file_name=os.path.join(temp_dir, "thumb.jpg"))
             
             thumb_path = await process_thumbnail(thumb_path)
         except Exception as e:
@@ -372,18 +358,22 @@ async def auto_rename_files(client, message):
         except FloodWait as e:
             await msg.edit(to_small_caps(f"ꜰʟᴏᴏᴅ ᴡᴀɪᴛ: ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ {e.x} ꜱᴇᴄᴏɴᴅꜱ ʙᴇꜰᴏʀᴇ ᴛʀʏɪɴɢ ᴀɢᴀɪɴ"))
             await asyncio.sleep(e.x)
-            await auto_rename_files(client, message)  # Retry
             return
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴜᴘʟᴏᴀᴅ ꜰᴀɪʟᴇᴅ: {str(e)}"))
             raise
-        finally:
-            # Cleanup files after upload
-            await cleanup_files(download_path, metadata_path, thumb_path)
 
     except Exception as e:
         logger.error(f"Processing error for user {user_id}: {str(e)}", exc_info=True)
         await message.reply_text(to_small_caps(f"ᴇʀʀᴏʀ: {str(e)}"))
     finally:
-        renaming_operations.pop(operation_key, None)
-        await cleanup_files(download_path, metadata_path, thumb_path)
+        # Cleanup in background without blocking
+        async def cleanup():
+            try:
+                if os.path.exists(temp_dir):
+                    shutil.rmtree(temp_dir)
+                    logger.info(f"Cleaned up temp directory: {temp_dir}")
+            except Exception as e:
+                logger.error(f"Error cleaning up temp directory {temp_dir}: {e}")
+        
+        asyncio.create_task(cleanup())
