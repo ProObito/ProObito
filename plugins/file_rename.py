@@ -216,6 +216,15 @@ async def handle_extract_callback(client, callback_query):
     )
     await callback_query.answer(to_small_caps(f"ꜱᴇᴛ ᴛᴏ {mode} ᴍᴏᴅᴇ"))
 
+async def cleanup_files(*file_paths):
+    """Clean up temporary files"""
+    for file_path in file_paths:
+        if file_path and os.path.exists(file_path):
+            try:
+                os.remove(file_path)
+            except Exception as e:
+                logger.error(f"Failed to cleanup file {file_path}: {e}")
+
 @Client.on_message(filters.private & (filters.document | filters.video | filters.audio))
 async def auto_rename_files(client, message):
     """main handler for auto-renaming files"""
@@ -225,41 +234,30 @@ async def auto_rename_files(client, message):
     if not format_template:
         return await message.reply_text(to_small_caps("ᴘʟᴇᴀꜱᴇ ꜱᴇᴛ ᴀ ʀᴇɴᴀᴍᴇ ꜰᴏʀᴍᴀᴛ ᴜꜱɪɴɢ /autorename"))
 
-    # get file information
-    if message.document:
-        file_id = message.document.file_id
-        file_name = message.document.file_name
-        file_size = message.document.file_size
-        media_type = "document"
-    elif message.video:
-        file_id = message.video.file_id
-        file_name = message.video.file_name or "video"
-        file_size = message.video.file_size
-        media_type = "video"
-    elif message.audio:
-        file_id = message.audio.file_id
-        file_name = message.audio.file_name or "audio"
-        file_size = message.audio.file_size
-        media_type = "audio"
-    else:
-        return await message.reply_text(to_small_caps("ᴜɴꜱᴜᴘᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ ᴛʏᴘᴇ"))
-
-    # nsfw check
-    if await check_anti_nsfw(file_name, message):
-        return await message.reply_text(to_small_caps("ɴꜱꜰᴡ ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ"))
-
-    # user-specific operation key
-    operation_key = f"{user_id}:{file_id}"
-
-    # prevent duplicate processing for the same user and file
-    if operation_key in renaming_operations:
-        if (datetime.now() - renaming_operations[operation_key]).seconds < 30:
-            logger.info(f"Operation already in progress for {operation_key}")
-            return
-    renaming_operations[operation_key] = datetime.now()
-
-    
     try:
+        # get file information
+        if message.document:
+            file_id = message.document.file_id
+            file_name = message.document.file_name
+            file_size = message.document.file_size
+            media_type = "document"
+        elif message.video:
+            file_id = message.video.file_id
+            file_name = message.video.file_name or "video"
+            file_size = message.video.file_size
+            media_type = "video"
+        elif message.audio:
+            file_id = message.audio.file_id
+            file_name = message.audio.file_name or "audio"
+            file_size = message.audio.file_size
+            media_type = "audio"
+        else:
+            return await message.reply_text(to_small_caps("ᴜɴꜱᴜᴘᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ ᴛʏᴘᴇ"))
+
+        # nsfw check
+        if await check_anti_nsfw(file_name, message):
+            return await message.reply_text(to_small_caps("ɴꜱꜰᴡ ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ"))
+
         # determine extraction source (filename or caption)
         extraction_mode = await codeflixbots.get_extraction_mode(user_id)
         source_text = message.caption or file_name if extraction_mode == "caption" else file_name
@@ -305,7 +303,8 @@ async def auto_rename_files(client, message):
             )
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴅᴏᴡɴʟᴏᴀᴅ ꜰᴀɪʟᴇᴅ: {e}"))
-            raise
+            await cleanup_files(download_path)
+            return
 
         # process metadata
         await msg.edit(to_small_caps("**ᴘʀᴏᴄᴇꜱꜱɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ...**"))
@@ -314,7 +313,8 @@ async def auto_rename_files(client, message):
             file_path = metadata_path
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴍᴇᴛᴀᴅᴀᴛᴀ ᴘʀᴏᴄᴇꜱꜱɪɴɢ ꜰᴀɪʟᴇᴅ: {e}"))
-            raise
+            await cleanup_files(download_path, metadata_path)
+            return
 
         # prepare for upload
         await msg.edit(to_small_caps("**ᴘʀᴇᴘᴀʀɪɴɢ ᴜᴘʟᴏᴀᴅ...**"))
@@ -352,9 +352,11 @@ async def auto_rename_files(client, message):
         except Exception as e:
             await msg.edit(to_small_caps(f"ᴜᴘʟᴏᴀᴅ ꜰᴀɪʟᴇᴅ: {e}"))
             raise
+        finally:
+            # Cleanup files after upload
+            await cleanup_files(download_path, metadata_path, thumb_path)
 
     except Exception as e:
         logger.error(f"Processing error for user {user_id}: {e}")
         await message.reply_text(to_small_caps(f"ᴇʀʀᴏʀ: {str(e)}"))
-    finally:
-        renaming_operations.pop(operation_key, None)
+        await cleanup_files(download_path, metadata_path, thumb_path)
