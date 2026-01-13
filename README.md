@@ -1,89 +1,90 @@
 <div align="center">
+  
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=250&section=header&text=Proobito&fontSize=90&animation=fadeIn&fontAlignY=38" width="100%" />
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Hi%2C+I'm+Proobito+%F0%9F%91%8B;Full+Stack+Developer;Backend+Architecture+Specialist;Always+Learning%2C+Always+Building" alt="Typing SVG" />
-
-  <p>
-    <a href="https://github.com/Proobito">
-      <img src="https://komarev.com/ghpvc/?username=Proobito&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
-    </a>
-  </p>
+  <h1>
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;Backend+System+Architect;Open+Source+Contributor;Problem+Solver" alt="Typing SVG" />
+  </h1>
 
   <p align="center">
     <a href="https://t.me/Proobito" target="_blank">
-      <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+      <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
     </a>
     <a href="https://github.com/Proobito" target="_blank">
-      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
     </a>
   </p>
 
-</div>
-
----
-
-### 👨‍💻 About Me
-
-I am a **Full Stack Developer** with a specialized focus on robust **Backend Systems**. While I am comfortable crafting responsive Frontends, my true passion lies in architecting scalable APIs, optimizing database performance, and automating complex workflows.
-
-> *"I prioritize clean architecture, long-term maintainability, and code that performs at scale."*
-
-- 🔭 I’m currently working on **High-performance REST APIs**
-- 🌱 I’m currently learning **Advanced Microservices Patterns**
-- 💬 Ask me about **Python, Node.js, and System Design**
-
----
-
-### 🛠️ Tech Stack & Tools
-
-<div align="center">
-
-| **Category** | **Technologies** |
-| :--- | :--- |
-| **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
-| **Backend** | ![Nodejs](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi) ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white) |
-| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) |
-| **Databases** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=flat-square&logo=mysql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=flat-square&logo=redis&logoColor=white) |
-| **DevOps & Tools** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![Git](https://img.shields.io/badge/GIT-E44C30?style=flat-square&logo=git&logoColor=white) ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) |
+  <img src="https://komarev.com/ghpvc/?username=Proobito&label=Profile%20Views&color=0e75b6&style=flat-square" />
 
 </div>
 
 ---
 
-### 🚀 Key Competencies
-
-Here is what I bring to the table:
-
-* **API Development:** Designing RESTful endpoints with strict validation and security (JWT/OAuth).
-* **Database Management:** Schema design, indexing strategies, and raw SQL queries for performance.
-* **Automation:** Python scripts for web scraping, data processing, and background jobs.
-* **Deployment:** Containerizing applications with Docker and managing Linux servers.
-
----
-
-### 📊 GitHub Analytics
-
+### ⚡ Quick Bytes
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Proobito&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b27" height="180" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Proobito&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27" height="180" alt="languages graph" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Proobito&theme=tokyonight&hide_border=true&background=1a1b27" alt="streak graph" />
+  <table>
+    <tr>
+      <td width="50%">
+        <ul>
+          <li>🔭 Currently building <b>Scalable Microservices</b></li>
+          <li>🚀 Specialized in <b>Performance Optimization</b></li>
+          <li>🛠️ Love working with <b>Docker & Linux</b></li>
+          <li>📫 Reach me at: <a href="https://t.me/Proobito">@Proobito</a></li>
+        </ul>
+      </td>
+      <td width="50%">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Proobito&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Langs" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
 
+### 🛠️ Tech Universe
+
 <div align="center">
+  <p>
+    <b>Languages:</b><br>
+    <img src="https://skillicons.dev/icons?i=python,js,cpp,java,php,html,css" />
+  </p>
+  <p>
+    <b>Backend & Frameworks:</b><br>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,react,tailwind" />
+  </p>
+  <p>
+    <b>DevOps & Databases:</b><br>
+    <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis,docker,linux,nginx,git,vscode" />
+  </p>
+</div>
 
-  ### 📫 Let's Connect
+---
 
-  <a href="https://t.me/Proobito">
-    <img src="https://img.shields.io/badge/Telegram-Message%20Me-blue?style=for-the-badge&logo=telegram" />
-  </a>
-  
-  <br><br>
-  <i>"Code is like humor. When you have to explain it, it’s bad."</i>
-  
+### 🏆 Achievements & GitHub Trophies
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Proobito&theme=tokyonight&no-bg=true&column=4" width="100%" />
+</div>
+
+---
+
+### 📊 Performance Metrics
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Proobito&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" height="180" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Proobito&theme=tokyonight&hide_border=true&background=0D1117" height="180" />
+</div>
+
+---
+
+### 🕹️ Weekly Activity (Contribution Snake)
+<div align="center">
+  <img src="https://github-user-contribution-canvas.vercel.app/api/snake?github_user=Proobito&color_empty=%230d1117&color_snake=%2336BCF7" width="100%" alt="Snake Animation" />
+</div>
+
+---
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Quote" />
+  <br>
+  <p><i>"Code never lies, comments sometimes do."</i></p>
 </div>
