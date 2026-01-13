@@ -1,28 +1,24 @@
 <div align="center">
   
-  <img src="https://capsule-render.vercel.app/render?type=thicket&color=0072ff&height=150&section=header" width="100%" />
+  <img src="https://capsule-render.vercel.app/render?type=kaka&color=0:36BCF7,100:0072ff&height=300&section=header&text=PROOBITO&fontSize=90&animation=twinkling&fontAlignY=35" width="100%" />
 
   <br/>
 
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=250&section=header&text=PROOBITO&fontSize=90&animation=fadeIn&fontAlignY=38" width="100%" />
-
-  <h1>
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=36BCF7&center=true&vCenter=true&width=800&lines=Full+Stack+Backend+Architect;Scalable+System+Designer;Automation+%26+Scraping+Expert;High-Performance+API+Specialist" alt="Typing SVG" />
-  </h1>
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=800&size=32&pause=1000&color=36BCF7&center=true&vCenter=true&width=800&lines=%E2%9C%A7+Full+Stack+Backend+Architect;%E2%9C%A7+Scalable+System+Engineer;%E2%9C%A7+Automation+%26+Scraping+Maestro;%E2%9C%A7+Turning+Coffee+Into+Scalable+Logic" alt="Typing SVG" />
 
   <p align="center">
     <a href="https://t.me/Proobito" target="_blank">
-      <img src="https://img.shields.io/badge/Connect-Telegram-26A8E1?style=for-the-badge&logo=telegram&logoColor=white" />
-    </a>
-    <a href="mailto:contact@proobito.dev" target="_blank">
-      <img src="https://img.shields.io/badge/Hire_Me-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+      <img src="https://img.shields.io/badge/TELEGRAM-26A8E1?style=for-the-badge&logo=telegram&logoColor=white" />
     </a>
     <a href="https://github.com/Proobito" target="_blank">
-      <img src="https://img.shields.io/badge/Portfolio-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+      <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" />
+    </a>
+    <a href="mailto:contact@proobito.dev" target="_blank">
+      <img src="https://img.shields.io/badge/MAIL_ME-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
     </a>
   </p>
 
-  <img src="https://komarev.com/ghpvc/?username=Proobito&label=PROFILE%20ACCESS%20LEVEL&color=0072ff&style=flat-square" alt="Views" />
+  <img src="https://komarev.com/ghpvc/?username=Proobito&label=SYSTEM%20PENETRATIONS&color=0072ff&style=for-the-badge" alt="Views" />
 
 </div>
 
@@ -30,57 +26,38 @@
 
 ---
 
-<details open>
-  <summary><b>📑 Table of Contents (Click to Collapse)</b></summary>
-  <ul>
-    <li><a href="#about-me">Executive Summary</a></li>
-    <li><a href="#core-competencies">Core Competencies</a></li>
-    <li><a href="#tech-arsenal">Technical Arsenal</a></li>
-    <li><a href="#engineering-standards">Engineering Standards</a></li>
-    <li><a href="#featured-projects">Project Showcases</a></li>
-    <li><a href="#github-analytics">Advanced Analytics</a></li>
-    <li><a href="#professional-roadmap">Future Roadmap</a></li>
-    <li><a href="#contact-hub">Contact Hub</a></li>
-  </ul>
-</details>
+## 📜 The Developer's Codex
+
+<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJueXp1c3BqZ3B5amF6Z3B5amF6Z3B5amF6Z3B5amF6Z3B5JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="250" />
+
+I am **Proobito**, a digital architect specialized in high-performance backend systems. My journey is defined by a relentless pursuit of code elegance and system efficiency. I don't just write scripts; I build robust infrastructures that power modern web experiences.
+
+### ⚡ Technical Philosophy
+* **Performance:** If it's not fast, it's broken.
+* **Security:** Encryption is a human right.
+* **Scalability:** Build for 100, architect for 1,000,000.
+* **Cleanliness:** Code is read more often than it is written.
 
 <br/>
 
 ---
 
-<h2 id="about-me">🚀 Executive Summary</h2>
+## 🖋️ Typography & Environment
 
-I am a highly analytical **Full Stack Developer** with a specialized focus on **Backend Architecture** and **System Efficiency**. With years of experience in the developer ecosystem, I bridge the gap between complex logic and user-centric design. 
-
-My approach to development is rooted in the **SOLID** principles, ensuring that every line of code I write is scalable, maintainable, and ready for production-level traffic. I don't just build features; I architect solutions.
-
-> *"Performance is not an afterthought; it is a foundational requirement."*
-
-- 🔭 **Current Focus:** Building distributed microservices with Go and Python.
-- 🌱 **Learning:** Deep Diving into Kubernetes and AI-driven automation.
-- ⚡ **Fun Fact:** I spend more time naming variables than writing the actual logic.
-- 💻 **OS Preference:** Arch Linux / Debian (WSL2 for dev).
-
-<br/>
-
----
-
-<h2 id="core-competencies">🧠 Core Competencies</h2>
+A developer's tools define their craft. I am obsessed with clean aesthetics and high-legibility fonts.
 
 <div align="center">
   <table border="0">
     <tr>
-      <td width="33%">
-        <h3 align="center">System Architecture</h3>
-        <p align="center">Designing microservices, event-driven systems, and scalable database schemas for high-concurrency apps.</p>
+      <td width="50%">
+        <h4 align="center">Preferred Font: Fira Code</h4>
+        <img src="https://raw.githubusercontent.com/tonsky/FiraCode/master/extras/sample.png" width="100%" alt="Fira Code" />
+        <p align="center"><i>Ligatures make the code feel like art.</i></p>
       </td>
-      <td width="33%">
-        <h3 align="center">API Engineering</h3>
-        <p align="center">Crafting secure RESTful and GraphQL APIs with strict JWT/OAuth validation and documentation.</p>
-      </td>
-      <td width="33%">
-        <h3 align="center">Web Automation</h3>
-        <p align="center">Industrial-grade web scraping and automation using rotating proxies and headless browsers.</p>
+      <td width="50%">
+        <h4 align="center">Primary Theme: Tokyo Night</h4>
+        <img src="https://user-images.githubusercontent.com/11250/115160875-98ed2a00-9ff1-11eb-98d0-6f0923019803.png" width="100%" alt="Tokyo Night" />
+        <p align="center"><i>Gentle on the eyes for those 3 AM sessions.</i></p>
       </td>
     </tr>
   </table>
@@ -90,71 +67,58 @@ My approach to development is rooted in the **SOLID** principles, ensuring that 
 
 ---
 
-<h2 id="tech-arsenal">🛠️ Technical Arsenal</h2>
+## 🛠️ The Tech Arsenal
 
-### 💻 Programming & Scripting
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=python,javascript,typescript,cpp,java,php,go,rust,bash,c,cs" />
-</div>
+### 🟦 Core Languages & Systems
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,js,cpp,java,php,ts,go,rust,c,cs,bash&perline=11" />
+</p>
 
-### ⚙️ Backend Frameworks & Runtimes
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,flask,spring,laravel,dotnet,symfony,nest" />
-</div>
+### 🟩 Backend Architecture & Frameworks
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,flask,spring,laravel,dotnet,nest,symfony&perline=10" />
+</p>
 
-### 🎨 Frontend & Design Systems
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,bootstrap,sass,jquery,html,css,figma,threejs" />
-</div>
+### 🟨 Frontend Synergy
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,bootstrap,sass,jquery,html,css,threejs,figma&perline=10" />
+</p>
 
-### 🗄️ Database, Caching & Search
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis,sqlite,cassandra,dynamodb,firebase,elasticsearch" />
-</div>
-
-### ☁️ Infrastructure & Cloud Operations
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,linux,nginx,aws,gcp,azure,git,github,jenkins,terraform,ansible" />
-</div>
-
-### ⬛ Professional Tooling
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=vscode,postman,vim,obsidian,pnpm,babel,webpack,jest,selenium,vitest" />
-</div>
+### 🟪 Databases & Infrastructure
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis,sqlite,docker,kubernetes,linux,nginx,aws,git&perline=11" />
+</p>
 
 <br/>
 
 ---
 
-<h2 id="engineering-standards">🔄 Engineering Standards & Workflow</h2>
+## 🔄 Architectural Workflow
 
-| Phase | Methodology | Tools & Practices |
-| :--- | :--- | :--- |
-| **01. Discovery** | Requirement gathering & Feasibility study. | Jira, Confluence, Trello |
-| **02. Design** | ERD Modeling, API Documentation, System Flow. | Swagger, Draw.io, LucidChart |
-| **03. Dev Ops** | CI/CD Integration, Dockerization, Staging. | GitHub Actions, Docker, Portainer |
-| **04. Build** | Test Driven Development (TDD), DRY Code. | PyTest, Jest, Mocha |
-| **05. Optimize** | Query optimization, Load Balancing, Caching. | Redis, Nginx, Prometheus |
-| **06. Monitor** | Error logging, Uptime tracking, Scaling. | Grafana, Sentry, Datadog |
+| Level | Phase | Core Action | Standard Tools |
+| :--- | :--- | :--- | :--- |
+| **01** | **Discovery** | Logic Mapping & ERDs | LucidChart, Figma |
+| **02** | **Core Dev** | Backend Logic & API Design | FastAPI, Node.js, Go |
+| **03** | **Validation** | Unit & Integration Testing | PyTest, Jest, Postman |
+| **04** | **Orchestration** | Containerization & Load Balancing | Docker, Nginx, K8s |
+| **05** | **Monitoring** | Performance Profiling | Prometheus, Grafana |
 
 <br/>
 
 ---
 
-<h2 id="featured-projects">🚀 Featured Project Showcases</h2>
+## 🚀 The Project Vault
+
+<div align="center">
 
 <table border="0">
   <tr>
-    <td width="55%">
-      <h3>🌐 Advanced API Gateway & Identity Manager</h3>
-      <p>A centralized authentication and traffic management system designed for distributed microservices. Features include real-time rate limiting, IP whitelisting, and automated JWT revocation.</p>
-      <ul>
-        <li><b>Tech:</b> FastAPI, Redis, PostgreSQL, Docker</li>
-        <li><b>Performance:</b> 15k+ Request/sec capacity</li>
-      </ul>
-      <a href="https://github.com/Proobito"><b>View Repository →</b></a>
+    <td width="60%">
+      <h3>💎 Ultra-Scale API Gateway</h3>
+      <p>A mission-critical gateway designed for high-concurrency microservices. Features distributed rate-limiting, geo-fencing, and dynamic load balancing.</p>
+      <code>Python</code> <code>Redis</code> <code>Docker</code> <code>gRPC</code>
     </td>
-    <td width="45%">
+    <td width="40%">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=Proobito&repo=Advanced-API-Gateway&theme=tokyonight" width="100%" />
     </td>
   </tr>
@@ -164,149 +128,87 @@ My approach to development is rooted in the **SOLID** principles, ensuring that 
 
 <table border="0">
   <tr>
-    <td width="45%">
+    <td width="40%">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=Proobito&repo=AI-Web-Scraper&theme=tokyonight" width="100%" />
     </td>
-    <td width="55%">
-      <h3>🤖 Enterprise Scraper Framework</h3>
-      <p>A high-performance scraping engine capable of bypassing Cloudflare and anti-bot systems. Integrated with OpenAI for automated data extraction and categorization.</p>
-      <ul>
-        <li><b>Tech:</b> Playwright, Python, RabbitMQ, MongoDB</li>
-        <li><b>Scale:</b> Processes 1M+ pages/day</li>
-      </ul>
-      <a href="https://github.com/Proobito"><b>View Repository →</b></a>
+    <td width="60%">
+      <h3>🤖 Neural Web Scraper</h3>
+      <p>An intelligent automation engine that utilizes AI to adapt to DOM changes. Capable of processing millions of requests through sophisticated proxy rotation.</p>
+      <code>Node.js</code> <code>Puppeteer</code> <code>MongoDB</code> <code>AI</code>
     </td>
   </tr>
 </table>
 
-<br/>
-
-<table border="0">
-  <tr>
-    <td width="55%">
-      <h3>🛒 Scalable E-Commerce Core</h3>
-      <p>A multi-tenant e-commerce backend with advanced inventory management, global payment gateway integrations, and real-time shipping tracking.</p>
-      <ul>
-        <li><b>Tech:</b> Node.js, React, Stripe API, Redis</li>
-        <li><b>Feature:</b> 99.9% Uptime with automated backups</li>
-      </ul>
-      <a href="https://github.com/Proobito"><b>View Repository →</b></a>
-    </td>
-    <td width="45%">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=Proobito&repo=E-Commerce-Core&theme=tokyonight" width="100%" />
-    </td>
-  </tr>
-</table>
+</div>
 
 <br/>
 
 ---
 
-<h2 id="github-analytics">📊 Advanced Developer Analytics</h2>
+## 📊 System Metrics
 
 <div align="center">
   <table border="0">
     <tr>
-      <td width="50%">
-        <img src="https://github-readme-stats.vercel.app/api?username=Proobito&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&count_private=true&include_all_commits=true" width="100%" />
-      </td>
-      <td width="50%">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=Proobito&theme=tokyonight&hide_border=true&background=0D1117" width="100%" />
-      </td>
+      <td><img src="https://github-readme-stats.vercel.app/api?username=Proobito&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&count_private=true&include_all_commits=true" width="100%" /></td>
+      <td><img src="https://github-readme-streak-stats.herokuapp.com/?user=Proobito&theme=tokyonight&hide_border=true&background=0D1117" width="100%" /></td>
     </tr>
     <tr>
-      <td width="50%">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Proobito&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&langs_count=10" width="100%" />
-      </td>
-      <td width="50%">
-        <img src="https://github-profile-trophy.vercel.app/?username=Proobito&theme=tokyonight&no-bg=true&column=3" width="100%" />
-      </td>
+      <td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Proobito&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" width="100%" /></td>
+      <td><img src="https://github-profile-trophy.vercel.app/?username=Proobito&theme=tokyonight&no-bg=true&column=3" width="100%" /></td>
     </tr>
   </table>
 </div>
 
 <br/>
 
-<h3 align="center">🐍 The Code-Consumption Snake</h3>
+<h3 align="center">🐍 The Contribution Sequence</h3>
 <div align="center">
   <img src="https://github-user-contribution-canvas.vercel.app/api/snake?github_user=Proobito&color_empty=%230d1117&color_snake=%2336BCF7" width="100%" />
 </div>
 
 <br/>
 
-<h3 align="center">📈 Global Contribution Activity</h3>
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Proobito&theme=tokyonight&bg_color=0D1117&hide_border=true&color=36BCF7" width="100%" />
-</div>
+---
+
+## 🗺️ Growth & Innovation Roadmap
+
+- [x] **2024:** Perfected Event-Driven Architectures and Async Processing.
+- [ ] **Q1 2025:** Exploring Rust for high-performance systems.
+- [ ] **Q2 2025:** Implementing Blockchain-based decentralized storage.
+- [ ] **Q4 2025:** Launching a massive Open Source Backend Boilerplate.
 
 <br/>
 
 ---
 
-<h2 id="professional-roadmap">🗺️ Strategic Roadmap (2025 - 2026)</h2>
+<h2 id="contact">🤝 Forge a Connection</h2>
 
-<div align="left">
-  <ul>
-    <li><b>[DONE] Q4 2024:</b> Scaled API Architecture with Go & Microservices.</li>
-    <li><b>[PROGRESS] Q1 2025:</b> Deep diving into Distributed Systems & Fault Tolerance.</li>
-    <li><b>[UPCOMING] Q2 2025:</b> Implementing AI-driven backend performance tuning.</li>
-    <li><b>[GOAL] Q4 2025:</b> Mastering Serverless Architecture and Cloud-Native scaling.</li>
-    <li><b>[VISION] 2026:</b> Contributing to High-Level Python/Node Open Source Core projects.</li>
-  </ul>
-</div>
-
-<br/>
-
----
-
-<h2 id="professional-services">💼 Professional Services</h2>
+I am available for architectural consulting, complex backend development, and elite-level collaborations. If you have a project that requires precision engineering, let's talk.
 
 <div align="center">
-  <table>
-    <tr>
-      <td><b>Backend Dev</b></td>
-      <td><b>Custom Automation</b></td>
-      <td><b>Database Design</b></td>
-      <td><b>Tech Consulting</b></td>
-    </tr>
-    <tr>
-      <td>API Design, Auth, Logic</td>
-      <td>Scrapers, Bots, Workflows</td>
-      <td>Optimization, Indexing</td>
-      <td>Architecture Review</td>
-    </tr>
-  </table>
-</div>
-
-<br/>
-
----
-
-<h2 id="contact-hub">📫 Let's Forge Something New</h2>
-
-I am open to high-level collaborations, architectural consultations, and innovative full-stack projects. Whether you have a complex problem to solve or a vision to build, let's talk.
-
-<div align="center">
+  
+  <br/>
   
   <a href="https://t.me/Proobito" target="_blank">
-    <img src="https://img.shields.io/badge/Connect_on_Telegram-26A8E1?style=for-the-badge&logo=telegram&logoColor=white" />
+    <img src="https://img.shields.io/badge/Connect_Via_Telegram-26A8E1?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
-  &nbsp;&nbsp;
-  <a href="mailto:your-email@example.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email_for_Inquiry-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="mailto:contact@proobito.dev" target="_blank">
+    <img src="https://img.shields.io/badge/Direct_Inquiry_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  
+
   <br/><br/>
   
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="90%" />
 
   <br/><br/>
 
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=0072ff&height=150&section=footer&text=ALWAYS%20LEARNING%20|%20ALWAYS%20BUILDING&fontSize=25" width="100%" />
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=100&section=footer&text=ALWAYS%20BUILDING%20|%202026&fontSize=20" width="100%" />
 
   <p align="center">
-    <i>Built with precision by <b>Proobito</b> &copy; 2026</i><br/>
-    <sub>Last Updated: Wednesday, Jan 14, 2026</sub>
+    <sub>This profile is optimized for <b>Engineers</b> and <b>Architects</b>.</sub><br/>
+    <sub>Built by <b>Proobito</b> &copy; 2026</sub>
   </p>
 
 </div>
